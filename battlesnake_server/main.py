@@ -17,7 +17,7 @@ def read_root():
             battlesnake_info = json.load(fo)
             return battlesnake_info 
     except FileNotFoundError:
-        return {'apiversion' : 1}
+        return {'apiversion' : "1"}
 
 @app.post('/start', summary="this endpoint receives a request at the start of a match")
 def save_start_info(info : GameStatus):
