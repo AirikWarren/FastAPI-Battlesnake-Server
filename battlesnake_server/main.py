@@ -1,13 +1,23 @@
 from .models import GameStatus
 
+from pprint import pprint
+
 import json
 import random
 
 from fastapi import FastAPI
+from fastapi.exceptions import RequestValidationError
+from fastapi.exception_handlers import request_validation_exception_handler
+
 
 app = FastAPI()
 
 move_choices = ['up', 'down', 'left', 'right']
+
+@app.exception_handler(RequestValidationError)
+async def validation_exception_handler(request, exc):
+    pprint(exc)
+    return await request_validation_exception_handler(request, exc)
 
 @app.get('/')
 def read_root():
@@ -41,7 +51,6 @@ def make_move(info : GameStatus):
     '''saves info to a file called turn{turn_number}.json, returns random move'''
     with open(f"turn{info.turn}.json", "w") as fo:
         json.dump(info.dict(), fo)
-
     return {
         "move" : random.choice(move_choices),
     } 
