@@ -1,5 +1,6 @@
 from typing import List
 from pydantic import BaseModel
+from typing import Optional
 
 class Coordinates(BaseModel):
     x : int
@@ -24,8 +25,8 @@ class BattleSnake(BaseModel):
     latency : str
     head : Coordinates 
     length : int
-    shout : str
-    squad : str
+    shout : Optional[str]
+    squad : Optional[str]
 
 class Game(BaseModel):
     ''' Info about config / meta info on a game 
@@ -49,8 +50,8 @@ class GameBoard(BaseModel):
     height : int
     width : int
     food : List[Coordinates]
-    hazards : List[Coordinates] 
-    snakes : List[BattleSnake] 
+    hazards : Optional[List[Coordinates]]
+    snakes : Optional[List[BattleSnake]]
 
 class GameStatus(BaseModel):
     '''Info about all the game state, sent to the server at the /start, /move, and /end endpoints and with every request
