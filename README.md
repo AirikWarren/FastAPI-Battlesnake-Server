@@ -7,17 +7,20 @@ An implementation of the Battlesnake API using the FastAPI framework.
 2. Upgrade your pip to the newest version (21.0.1 at the time of writing) 
 3. Install the dependencies defined in requirements.txt
 4. Run ```run_dev_server.py``` 
-5. Open up your web browser of choice and navigate to [http://localhost:8000/docs](http://localhost:8000/docs) (alternatively you can view those same docs on the server that hosts the [Example Heroku Deployment](https://battlesnake-fast-api.herokuapp.com/docs)
+5. Open up your web browser of choice and navigate to [http://localhost:8000/docs](http://localhost:8000/docs) (alternatively you can view those same docs on the server that hosts the [Example Heroku Deployment)](https://battlesnake-fast-api.herokuapp.com/docs)
 6. Channel your inner snake charmer and start writing some algorithms!
 
 # Deployment to Heroku 
 
 A sane and reasonable default Heroku configuration can be found on the [heroku-deployment](https://github.com/AirikWarren/FastAPI-Battlesnake-Server/tree/heroku-deployment) branch of this repository, of particular note are the ```Procfile``` and ```battlesnake-info.json``` files located in the top level of the branch's directory, which you may use as jumping off points for your own Heroku Battlesnake server.
 
-*The following pre-requisite knowledge is assumed and beyond the scope of this tutorial*
+
+**Note: *The following pre-requisite knowledge is assumed and beyond the scope of this tutorial* **
+
 - ability to use Git to create repositories and clone other repositories
 - ability to create and/or posession of a pre-existing Heroku account 
 - ability to create and/or possession of a pre-existing Battlesnakes account
+
 
 1) fork / clone this repository into a repository of your own 
 2) study and/or copy paste the aforementioned ```Procfile``` and ```battlesnake-info.json``` files into your cloned / forked repo
