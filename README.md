@@ -19,13 +19,13 @@ A sane and reasonable default Heroku configuration can be found on the [heroku-d
 
 **Note: *The following pre-requisite knowledge is assumed and beyond the scope of this tutorial* **
 
-- ability to use Git to create repositories and clone other repositories or [refer](https://guides.github.com/activities/hello-world/)
-- ability to create and/or posession of a pre-existing Heroku account or [refer](https://docs.railsbridge.org/installfest/create_a_heroku_account)
-- ability to create and/or possession of a pre-existing Battlesnakes account or [refer](https://play.battlesnake.com/)
+- [x] ability to use Git to create repositories and clone other repositories or [refer](https://guides.github.com/activities/hello-world/)
+- [x] ability to create and/or posession of a pre-existing Heroku account or [refer](https://docs.railsbridge.org/installfest/create_a_heroku_account)
+- [x] ability to create and/or possession of a pre-existing Battlesnakes account or [refer](https://play.battlesnake.com/)
 
 
 1) fork / clone this repository into a repository of your own. 
-2) study and/or copy paste the aforementioned ```Procfile``` and ```battlesnake-info.json``` files into your cloned / forked repo.
+2) study and/or copy paste the aforementioned ```Procfile``` [here](https://github.com/AirikWarren/FastAPI-Battlesnake-Server/blob/heroku-deployment/Procfile) and ```battlesnake-info.json``` [here](https://github.com/AirikWarren/FastAPI-Battlesnake-Server/blob/heroku-deployment/battlesnake-info.json) files into your cloned / forked repo.
 3) edit ```battlesnake-info.json``` so that the information it contains accurately reflects you / your snake. Refer to [this page](https://docs.battlesnake.com/references/api#the-battlesnake-api) in the official documentation if you need additional clarity.
 4) Navigate to your [Heroku Application Dashboard](https://dashboard.heroku.com/apps) and click on the button towards the top-right of your screen labeled ```New```.
 5) Select ```Create New App``` and follow the on-screen dialog to name your Heroku application, (keeping in mind that this name will be used as part of the URL to access your web server!) submit when finished.
